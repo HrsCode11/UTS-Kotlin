@@ -1,16 +1,21 @@
-package ...
+package id.ac.pnm.ti.utsmobilesatu
 
-// data class Club
+// data class id.ac.pnm.ti.utsmobilesatu.Club
 data class Club(
     val name: String,
-    val epl: ...
-    dst...
+    val EPL: Int,
+    val FA: Int,
+    val EFL: Int,
+    val UEL: Int,
+    val UCL: Int
 ) {
     val totalTrophy: Int
-        get() = ...
+        get() = EPL + FA + EFL + UEL + UCL
 }
 
-// extension function recap
+// extension function id.ac.pnm.ti.utsmobilesatu.recap
 fun Club.recap(): String {
-    return ...
+    return "$name: $totalTrophy"+"trophy"
 }
+
+
